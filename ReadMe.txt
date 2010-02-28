@@ -1,10 +1,10 @@
-XAuthTwitterEngine and Demo for iPhone
+XAuthTwitterEngine library and demo for iPhone.
 by Aral Balkan (@aral, http://aralbalkan.com)
 Copyright 2010 Aral Balkan. All Rights Reserved. 
 
 License: MIT
 
-Removes a lot of the oAuth browser-based authentication bloat from the Twitter+oAuth Source and provides a very simple example to demonstrate how to use Twitter's new xAuth authentication system. 
+Removes a lot of the unnecessary oAuth browser-based authentication bloat from the Twitter+oAuth Source and provides a very simple example to demonstrate how to use Twitter's new xAuth authentication system. 
 
 The easiest way to use the library in your own projects is to drag the Twitter+oAuth folder from the Libraries folder in the demo application to your own project. Also, don't forget to add libxml2.dylib to your new project. 
 
