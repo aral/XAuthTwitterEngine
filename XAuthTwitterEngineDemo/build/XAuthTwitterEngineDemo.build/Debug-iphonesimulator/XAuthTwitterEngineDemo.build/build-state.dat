@@ -1,7 +1,7 @@
 TXAuthTwitterEngineDemo
 v7
 r0
-t289086498.738581
+t289088966.233899
 cCheck dependencies
 cProcessInfoPlistFile /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Info.plist XAuthTwitterEngineDemo-Info.plist
 cCompileXIB /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/MainWindow.xib
@@ -9,6 +9,7 @@ cCompileXIB /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/XAuth
 cCpResource build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/jQueryInject.txt "Libraries & Headers/jQueryInject.txt"
 cCpResource build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/jQueryInjectLandscape.txt "Libraries & Headers/jQueryInjectLandscape.txt"
 cCpResource build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Readme.txt Readme.txt
+cCpResource build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Icon.png Icon.png
 cProcessPCH /var/folders/bz/bzDU030xHXK-jKYLMXnTzk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XAuthTwitterEngineDemo_Prefix-fvybimrzjybahhdtclzggmvosqpk/XAuthTwitterEngineDemo_Prefix.pch.gch XAuthTwitterEngineDemo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/main.o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 cCompileC build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemoAppDelegate.o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
@@ -61,6 +62,11 @@ s6840
 i"XAuthTwitterEngineDemoViewController.h"
 i"XAuthTwitterEngine.h"
 i"UIAlertView+Helper.h"
+
+N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Icon.png
+c000000004B8AEE0D00000000000004A2
+t1267396109
+s1186
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Libraries & Headers/MGTwitterEngine.h
 c000000004B89A119000000000000213C
@@ -556,23 +562,27 @@ i<Foundation/Foundation.h>
 i<UIKit/UIKit.h>
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app
-t1267393698
-s340
+t1267396166
+s374
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app.dSYM
-t1267393698
+t1267396069
 s102
 
+N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Icon.png
+t1267396138
+s1186
+
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Info.plist
-t1267392403
-s630
+t1267396166
+s616
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/MainWindow.nib
 t1267392403
 s1525
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/PkgInfo
-t1267392403
+t1267396166
 s8
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Readme.txt
@@ -580,7 +590,7 @@ t1267392403
 s0
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo
-t1267393698
+t1267396069
 s156976
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemoViewController.nib
@@ -705,8 +715,8 @@ t1267393001
 s38664
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemoViewController.o
-t1267393698
-s48012
+t1267396068
+s48000
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/main.o
 t1267392404
@@ -857,9 +867,9 @@ t1267391910
 s1737632
 
 NXAuthTwitterEngineDemo-Info.plist
-c000000004B8ABDC7000000000000038D
-t1267383751
-s909
+c000000004B8AEE450000000000000388
+t1267396165
+s904
 
 CAnalyze "/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Libraries & Headers/MGTwitterEngine.m"
 s289084711.252241
@@ -1015,7 +1025,7 @@ lSLF07#2@77"Analyze /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDe
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies289086498#289086498#0(0"0(0#1#0"4300885448#0"0#
+lSLF07#2@18"Check dependencies289088966#289088966#0(0"0(0#1#0"4300885448#0"0#
 
 CCompileC build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/MGTwitterEngine.o "/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Libraries & Headers/MGTwitterEngine.m" normal i386 objective-c com.apple.compilers.gcc.4_2
 s289085204.714335
@@ -1451,8 +1461,8 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@114"Compile /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoAppDelegate.m289085801#289085801#0(0"0(0#0#106"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoAppDelegate.m4300885448#2610"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Werror -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-generated-files.hmap -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-own-target-headers.hmap -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-all-target-headers.hmap -iquote /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-project-headers.hmap -F/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/include -I/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/usr/include/libxml2 -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/DerivedSources/i386 -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/DerivedSources -include /var/folders/bz/bzDU030xHXK-jKYLMXnTzk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XAuthTwitterEngineDemo_Prefix-fvybimrzjybahhdtclzggmvosqpk/XAuthTwitterEngineDemo_Prefix.pch -c /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoAppDelegate.m -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemoAppDelegate.o0#
 
 CCompileC build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemoViewController.o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s289086498.443965
-e289086498.622161
+s289088868.462803
+e289088868.945909
 r1
 xCompileC
 xbuild/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemoViewController.o
@@ -1461,7 +1471,7 @@ xnormal
 xi386
 xobjective-c
 xcom.apple.compilers.gcc.4_2
-lSLF07#2@117"Compile /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoViewController.m289086498#289086498#0(0"0(0#0#109"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoViewController.m4300885448#2616"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Werror -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-generated-files.hmap -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-own-target-headers.hmap -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-all-target-headers.hmap -iquote /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-project-headers.hmap -F/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/include -I/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/usr/include/libxml2 -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/DerivedSources/i386 -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/DerivedSources -include /var/folders/bz/bzDU030xHXK-jKYLMXnTzk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XAuthTwitterEngineDemo_Prefix-fvybimrzjybahhdtclzggmvosqpk/XAuthTwitterEngineDemo_Prefix.pch -c /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoViewController.m -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemoViewController.o0#
+lSLF07#2@117"Compile /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoViewController.m289088868#289088868#0(0"0(0#0#109"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoViewController.m4300885448#2616"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Werror -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -iquote /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-generated-files.hmap -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-own-target-headers.hmap -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-all-target-headers.hmap -iquote /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-project-headers.hmap -F/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/include -I/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/usr/include/libxml2 -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/DerivedSources/i386 -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/DerivedSources -include /var/folders/bz/bzDU030xHXK-jKYLMXnTzk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XAuthTwitterEngineDemo_Prefix-fvybimrzjybahhdtclzggmvosqpk/XAuthTwitterEngineDemo_Prefix.pch -c /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoViewController.m -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemoViewController.o0#
 
 CCompileC build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/main.o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s289085204.527161
@@ -1491,6 +1501,15 @@ r1
 xCompileXIB
 x/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/XAuthTwitterEngineDemoViewController.xib
 lSLF07#2@51"CompileXIB XAuthTwitterEngineDemoViewController.xib289085861#289085862#0(0"0(0#0#103"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/XAuthTwitterEngineDemoViewController.xib4300885448#624"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 3.1.3    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemoViewController.nib /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/XAuthTwitterEngineDemoViewController.xib0#
+
+CCpResource build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Icon.png Icon.png
+s289088938.650698
+e289088938.656118
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Icon.png
+xIcon.png
+lSLF07#2@13"Copy Icon.png289088938#289088938#0(0"0(0#0#71"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Icon.png4300885448#542"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Icon.png /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app0#
 
 CCpResource build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Readme.txt Readme.txt
 s289085203.605962
@@ -1529,32 +1548,32 @@ xSAOAuthTwitterEngine/twitter_load.png
 lSLF07#2@42"Copy SAOAuthTwitterEngine/twitter_load.png289078052#289078052#0(0"0(0#0#100"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/SAOAuthTwitterEngine/twitter_load.png4300885448#571"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/SAOAuthTwitterEngine/twitter_load.png /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app0#
 
 CGenerateDSYMFile /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app.dSYM /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo
-s289086498.684848
-e289086498.734313
+s289088869.227118
+e289088869.264125
 r1
 xGenerateDSYMFile
 x/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app.dSYM
 x/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo
-lSLF07#2@154"GenerateDSYMFile build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app.dSYM build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo289086498#289086498#0(0"0(0#0#140"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo4300885448#503"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/usr/bin/dsymutil /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app.dSYM0#
+lSLF07#2@154"GenerateDSYMFile build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app.dSYM build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo289088869#289088869#0(0"0(0#0#140"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo4300885448#503"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/usr/bin/dsymutil /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app.dSYM0#
 
 CLd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo normal i386
-s289086498.622260
-e289086498.684739
+s289088868.945998
+e289088869.227012
 r1
 xLd
 x/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo
 xnormal
 xi386
-lSLF07#2@145"Link /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo289086498#289086498#0(0"0(0#0#0"4300885448#1244"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator "-L/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Libraries & Headers/OAuthConsumer" -L/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo -F/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator -filelist /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemo.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -lOAuth -lxml2 -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo0#
+lSLF07#2@145"Link /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo289088868#289088869#0(0"0(0#0#0"4300885448#1244"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv MACOSX_DEPLOYMENT_TARGET 10.5    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -L/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator "-L/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Libraries & Headers/OAuthConsumer" -L/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo -F/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator -filelist /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/Objects-normal/i386/XAuthTwitterEngineDemo.LinkFileList -mmacosx-version-min=10.5 -framework Foundation -framework UIKit -framework CoreGraphics -lOAuth -lxml2 -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/XAuthTwitterEngineDemo0#
 
 CProcessInfoPlistFile /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Info.plist XAuthTwitterEngineDemo-Info.plist
-s289085203.182993
-e289085203.195792
+s289088966.161872
+e289088966.228725
 r1
 xProcessInfoPlistFile
 x/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Info.plist
 xXAuthTwitterEngineDemo-Info.plist
-lSLF07#2@41"Process XAuthTwitterEngineDemo-Info.plist289085203#289085203#0(0"0(0#0#96"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/XAuthTwitterEngineDemo-Info.plist4300885448#598"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility XAuthTwitterEngineDemo-Info.plist -genpkginfo /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Info.plist0#
+lSLF07#2@41"Process XAuthTwitterEngineDemo-Info.plist289088966#289088966#0(0"0(0#0#96"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/XAuthTwitterEngineDemo-Info.plist4300885448#598"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility XAuthTwitterEngineDemo-Info.plist -genpkginfo /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app/Info.plist0#
 
 CProcessPCH /var/folders/bz/bzDU030xHXK-jKYLMXnTzk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XAuthTwitterEngineDemo_Prefix-ftubfemejrqutpcnzbtpkozudgda/XAuthTwitterEngineDemo_Prefix.pch.gch XAuthTwitterEngineDemo_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
 s289077301.718992
@@ -1596,10 +1615,10 @@ xcom.apple.compilers.llvm.clang.1_0.analyzer
 lSLF07#2@44"Precompile XAuthTwitterEngineDemo_Prefix.pch289084710#289084710#0(0"0(0#0#96"/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/XAuthTwitterEngineDemo_Prefix.pch4300885448#2388"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv LANG en_US.US-ASCII    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Xcode3.2.1/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -pipe -fdiagnostics-print-source-range-info -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Werror -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30000 -isysroot /Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk -fasm-blocks -mmacosx-version-min=10.5 -gdwarf-2 -fvisibility=hidden -iquote /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-generated-files.hmap -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-own-target-headers.hmap -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-all-target-headers.hmap -iquote /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/XAuthTwitterEngineDemo-project-headers.hmap -F/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/include -I/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.1.3.sdk/usr/include/libxml2 -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/DerivedSources/i386 -I/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/XAuthTwitterEngineDemo.build/Debug-iphonesimulator/XAuthTwitterEngineDemo.build/DerivedSources -c /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/XAuthTwitterEngineDemo_Prefix.pch -o /var/folders/bz/bzDU030xHXK-jKYLMXnTzk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/XAuthTwitterEngineDemo_Prefix-gxifowzymnveuigzpqtlgxjjbphd/XAuthTwitterEngineDemo_Prefix.pch.pth0#
 
 CTouch /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app
-s289086498.734404
-e289086498.738531
+s289088966.231150
+e289088966.233870
 r1
 xTouch
 x/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app
-lSLF07#2@123"Touch /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app289086498#289086498#0(0"0(0#0#0"4300885448#343"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app0#
+lSLF07#2@123"Touch /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app289088966#289088966#0(0"0(0#0#0"4300885448#343"    cd /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo    setenv PATH "/Xcode3.2.1/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Xcode3.2.1/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/build/Debug-iphonesimulator/XAuthTwitterEngineDemo.app0#
 

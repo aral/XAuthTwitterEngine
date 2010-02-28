@@ -10,8 +10,8 @@
 #import "XAuthTwitterEngineDelegate.h"
 #import "OAToken.h"
 
-#define kOAuthConsumerKey		@"JNoUqtEaXo6AsbzVcgsGng"		// Replace these with your consumer key 
-#define	kOAuthConsumerSecret	@"3vDspB1st8KbWyUDAI1lV9oSTxYJRaqnbOMsNoGVtWM"		// and consumer secret from 
+#define kOAuthConsumerKey		@""		// Replace these with your consumer key 
+#define	kOAuthConsumerSecret	@""		// and consumer secret from 
 										// http://twitter.com/oauth_clients/details/<your app id>
 
 #define kCachedXAuthAccessTokenStringKey	@"cachedXAuthAccessTokenKey"

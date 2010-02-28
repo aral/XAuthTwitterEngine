@@ -36,6 +36,7 @@
 		A7D52DAA113AFC9C0079E507 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D52DA9113AFC9C0079E507 /* libxml2.dylib */; };
 		A7D52DCC113AFF0B0079E507 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = A7D52DCB113AFF0B0079E507 /* Readme.txt */; };
 		A7D52E3A113B0F230079E507 /* UIAlertView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D52E39113B0F230079E507 /* UIAlertView+Helper.m */; };
+		A7D52F74113B25A90079E507 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7D52F73113B25A90079E507 /* Icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,7 @@
 		A7D52DCB113AFF0B0079E507 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
 		A7D52E38113B0F230079E507 /* UIAlertView+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Helper.h"; sourceTree = "<group>"; };
 		A7D52E39113B0F230079E507 /* UIAlertView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Helper.m"; sourceTree = "<group>"; };
+		A7D52F73113B25A90079E507 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A7D52F73113B25A90079E507 /* Icon.png */,
 				2899E5210DE3E06400AC0155 /* XAuthTwitterEngineDemoViewController.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* XAuthTwitterEngineDemo-Info.plist */,
@@ -371,6 +374,7 @@
 				A7D52D4E113AFA480079E507 /* jQueryInject.txt in Resources */,
 				A7D52D4F113AFA480079E507 /* jQueryInjectLandscape.txt in Resources */,
 				A7D52DCC113AFF0B0079E507 /* Readme.txt in Resources */,
+				A7D52F74113B25A90079E507 /* Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

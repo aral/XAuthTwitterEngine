@@ -278,8 +278,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>4</integer>
+									<integer>16</integer>
+									<integer>12</integer>
 									<integer>0</integer>
 								</array>
 							</array>
@@ -312,14 +312,12 @@
 					<key>Dock</key>
 					<array>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
 								<string>A7D52D03113AF5560079E507</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>XAuthTwitterEngineDemoViewController.m</string>
+								<string>XAuthTwitterEngineDemo-Info.plist</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -327,14 +325,16 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>A7D52D04113AF5560079E507</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>XAuthTwitterEngineDemoViewController.m</string>
+										<string>XAuthTwitterEngineDemo-Info.plist</string>
 										<key>_historyCapacity</key>
 										<integer>10</integer>
 										<key>bookmark</key>
-										<string>A7D52F63113B1EC40079E507</string>
+										<string>A7D52F85113B2CA90079E507</string>
 										<key>history</key>
 										<array>
-											<string>A7D52F5A113B1C4C0079E507</string>
+											<string>A7D52F77113B25AA0079E507</string>
+											<string>A7D52F7F113B25C60079E507</string>
+											<string>A7D52F84113B2CA40079E507</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -610,13 +610,13 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>A7D52D19113AF8AE0079E507</string>
+				<string>A7D52F6D113B25660079E507</string>
 				<string>1CCC7628064C1048000F2A68</string>
 				<string>1CCC7629064C1048000F2A68</string>
-				<string>A7D52D1A113AF8AE0079E507</string>
-				<string>A7D52D1B113AF8AE0079E507</string>
-				<string>A7D52D1C113AF8AE0079E507</string>
-				<string>A7D52D1D113AF8AE0079E507</string>
+				<string>A7D52F6E113B25660079E507</string>
+				<string>A7D52F6F113B25660079E507</string>
+				<string>A7D52F70113B25660079E507</string>
+				<string>A7D52F71113B25660079E507</string>
 				<string>A7D52D03113AF5560079E507</string>
 			</array>
 			<key>ToolbarConfigUserDefaultsMinorVersion</key>
