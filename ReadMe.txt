@@ -1,5 +1,5 @@
 XAuthTwitterEngine and Demo for iPhone
-by Aral Balkan (http://aralbalkan.com)
+by Aral Balkan (@aral, http://aralbalkan.com)
 Copyright 2010 Aral Balkan. All Rights Reserved. 
 
 License: MIT
