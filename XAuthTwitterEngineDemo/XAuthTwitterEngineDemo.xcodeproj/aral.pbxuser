@@ -8,14 +8,14 @@
 	};
 	28D7ACF60DDB3853001CB0EB /* XAuthTwitterEngineDemoViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 532}}";
-			sepNavSelRange = "{1021, 0}";
-			sepNavVisRange = "{623, 573}";
+			sepNavIntBoundsRect = "{{0, 0}, {1025, 756}}";
+			sepNavSelRange = "{628, 0}";
+			sepNavVisRange = "{0, 1132}";
 		};
 	};
 	28D7ACF70DDB3853001CB0EB /* XAuthTwitterEngineDemoViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1379, 3276}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1379, 3234}}";
 			sepNavSelRange = "{1338, 0}";
 			sepNavVisRange = "{1119, 777}";
 		};
@@ -51,7 +51,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					10,
+					847,
 					20,
 					48,
 					43,
