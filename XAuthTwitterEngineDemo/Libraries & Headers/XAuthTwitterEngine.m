@@ -129,7 +129,7 @@
 */
 
 #pragma mark -
-#pragma mark xAuth 
+#pragma mark Public xAuth methods
 
 //
 // Attempts to retrieve an xAuthAccessToken for the passed username and password 
@@ -163,6 +163,9 @@
 	[request release];	
 }
 
+//
+// Cancels the asynchronous xAuth token exchange process.
+//
 -(void)cancelAccessTokenExchange
 {
 	[self.fetcher cancel];
@@ -170,23 +173,29 @@
 	self.fetcher = nil;
 }
 
-
-//=============================================================================================================================
-#pragma mark Private OAuth methods
-/*
-- (void) requestURL: (NSURL *) url token: (OAToken *) token onSuccess: (SEL) success onFail: (SEL) fail {
+//
+// Sets the xAuth token directly from a token string.
+//
+- (void)setAccessTokenFromTokenString:(NSString *)tokenString
+{
+	NSString *username = [self extractUsernameFromHTTPBody:tokenString];	
 	
-    OAMutableURLRequest				*request = [[[OAMutableURLRequest alloc] initWithURL: url consumer: self.consumer token:token realm:nil signatureProvider: nil] autorelease];
-	if (!request) return;
+	if (username.length > 0) {
+		[self setUsername: username password: nil];
+		if ([_delegate respondsToSelector: @selector(storeCachedTwitterXAuthAccessTokenString:forUsername:)]) [(id) _delegate storeCachedTwitterXAuthAccessTokenString: tokenString forUsername: username];
+	}
 	
-    [request setHTTPMethod: @"POST"];
+	[_accessToken release];
+	_accessToken = [[OAToken alloc] initWithHTTPResponseBody:tokenString];
 	
-    OADataFetcher				*fetcher = [[[OADataFetcher alloc] init] autorelease];	
-    [fetcher fetchDataWithRequest: request delegate: self didFinishSelector: success didFailSelector: fail];
 }
-*/
+
+
+#pragma mark -
+#pragma mark Private XAuth methods
 
 //
+// Access token fetch failed.
 //
 - (void) accessTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *) error {
 	if ([_delegate respondsToSelector: @selector(twitterXAuthConnectionDidFailWithError:)]) [(id) _delegate twitterXAuthConnectionDidFailWithError: error];	
@@ -195,35 +204,6 @@
 	self.fetcher = nil;
 }
 
-//
-// if the fetch fails this is what will happen
-// you'll want to add your own error handling here.
-//
-/*
-- (void) outhTicketFailed: (OAServiceTicket *) ticket data: (NSData *) data {
-	if ([_delegate respondsToSelector: @selector(twitterOAuthConnectionFailedWithData:)]) [(id) _delegate twitterOAuthConnectionFailedWithData: data];
-}
-*/
-
-//
-// request token callback
-// when twitter sends us a request token this callback will fire
-// we can store the request token to be used later for generating
-// the authentication URL
-//
-/*
-- (void) setRequestToken: (OAServiceTicket *) ticket withData: (NSData *) data {
-	if (!ticket.didSucceed || !data) return;
-	
-	NSString *dataString = [[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease];
-	if (!dataString) return;
-	
-	[_requestToken release];
-	_requestToken = [[OAToken alloc] initWithHTTPResponseBody:dataString];
-	
-	if (self.pin.length) _requestToken.pin = self.pin;
-}
-*/
 
 //
 // access token callback
@@ -236,16 +216,8 @@
 	
 	NSString *dataString = [[[NSString alloc] initWithData: data encoding: NSUTF8StringEncoding] autorelease];
 	if (!dataString) return;
-		
-	NSString *username = [self extractUsernameFromHTTPBody:dataString];
-	
-	if (username.length > 0) {
-		[self setUsername: username password: nil];
-		if ([_delegate respondsToSelector: @selector(storeCachedTwitterXAuthAccessTokenString:forUsername:)]) [(id) _delegate storeCachedTwitterXAuthAccessTokenString: dataString forUsername: username];
-	}
-	
-	[_accessToken release];
-	_accessToken = [[OAToken alloc] initWithHTTPResponseBody:dataString];
+
+	[self setAccessTokenFromTokenString:dataString];
 	
 	[self.fetcher release];
 	self.fetcher = nil;
@@ -317,6 +289,16 @@
         return nil;
     }
 	
+	//
+	// Check if we're authorized. If not don't carry out the request.
+	// Note: This will result in the delegate callback for the cached request token
+	// ===== to be called if it doesn't already exist.
+	//
+	if (![self isAuthorized])
+	{
+		return nil;
+	}
+	
 	// --------------------------------------------------------------------------------
 	// modificaiton from the base clase
 	// the base class creates a regular url request
@@ -326,7 +308,7 @@
 	//                                                              cachePolicy:NSURLRequestReloadIgnoringCacheData 
 	//                                                          timeoutInterval:URL_REQUEST_TIMEOUT];
 	// --------------------------------------------------------------------------------
-	NSLog(@"here %@", _accessToken);
+	NSLog(@"About to carry out request with access token: %@", _accessToken);
 	OAMutableURLRequest *theRequest = [[[OAMutableURLRequest alloc] initWithURL:finalURL
 																	   consumer:self.consumer 
 																		  token:_accessToken 
