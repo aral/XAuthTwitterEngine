@@ -16,6 +16,7 @@
 #import "OAConsumer.h"
 #import "OAMutableURLRequest.h"
 #import "OADataFetcher.h"
+#import "OAAsynchronousDataFetcher.h"
 #import "OAToken.h"
 
 #import "XAuthTwitterEngine.h"
@@ -43,12 +44,14 @@
 @synthesize accessTokenURL = _accessTokenURL;
 @synthesize consumerSecret = _consumerSecret, consumerKey = _consumerKey;
 @synthesize accessToken = _accessToken;
+@synthesize fetcher = _fetcher;
 
 - (void) dealloc {
 	self.accessTokenURL = nil;
 	
 	[_accessToken release];
 	[_consumer release];
+	[self.fetcher release];
 	[super dealloc];
 }
 
@@ -154,17 +157,23 @@
 							[OARequestParameter requestParameterWithName:@"x_auth_password" value:password],
 							nil]];
 	
-	OADataFetcher *fetcher = [[[OADataFetcher alloc] init] autorelease];
-	[fetcher fetchDataWithRequest:request
-						 delegate:self
-				didFinishSelector:@selector(/*accessTokenTicket:didFinishWithData:*/setAccessToken:withData:)
-				  didFailSelector:@selector(accessTokenTicket:didFailWithError:)];
 	
+	self.fetcher = [[OAAsynchronousDataFetcher alloc] initWithRequest:request delegate:self didFinishSelector:@selector(setAccessToken:withData:) didFailSelector:@selector(accessTokenTicket:didFailWithError:)];
+	[self.fetcher start];
 	[request release];	
 }
 
+-(void)cancelAccessTokenExchange
+{
+	[self.fetcher cancel];
+	[self.fetcher release];
+	self.fetcher = nil;
+}
+
+
 //=============================================================================================================================
 #pragma mark Private OAuth methods
+/*
 - (void) requestURL: (NSURL *) url token: (OAToken *) token onSuccess: (SEL) success onFail: (SEL) fail {
 	
     OAMutableURLRequest				*request = [[[OAMutableURLRequest alloc] initWithURL: url consumer: self.consumer token:token realm:nil signatureProvider: nil] autorelease];
@@ -175,11 +184,15 @@
     OADataFetcher				*fetcher = [[[OADataFetcher alloc] init] autorelease];	
     [fetcher fetchDataWithRequest: request delegate: self didFinishSelector: success didFailSelector: fail];
 }
+*/
 
 //
 //
 - (void) accessTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *) error {
 	if ([_delegate respondsToSelector: @selector(twitterXAuthConnectionDidFailWithError:)]) [(id) _delegate twitterXAuthConnectionDidFailWithError: error];	
+	
+	[self.fetcher release];
+	self.fetcher = nil;
 }
 
 //
@@ -233,6 +246,9 @@
 	
 	[_accessToken release];
 	_accessToken = [[OAToken alloc] initWithHTTPResponseBody:dataString];
+	
+	[self.fetcher release];
+	self.fetcher = nil;
 }
 
 

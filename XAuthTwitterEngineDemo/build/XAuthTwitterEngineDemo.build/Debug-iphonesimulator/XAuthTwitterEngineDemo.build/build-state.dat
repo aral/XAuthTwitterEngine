@@ -48,9 +48,9 @@ i"XAuthTwitterEngineDemoAppDelegate.h"
 i"XAuthTwitterEngineDemoViewController.h"
 
 N/Users/aral/projects/XAuthTwitterEngine/XAuthTwitterEngineDemo/Classes/XAuthTwitterEngineDemoViewController.h
-c000000004B8AE18200000000000004AD
-t1267392898
-s1197
+c000000004B8AF5CA000000000000046C
+t1267398090
+s1132
 i<UIKit/UIKit.h>
 i"XAuthTwitterEngineDelegate.h"
 i"OAToken.h"

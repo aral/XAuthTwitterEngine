@@ -16,6 +16,7 @@
 
 @class OAToken;
 @class OAConsumer;
+@class OAAsynchronousDataFetcher;
 
 @interface XAuthTwitterEngine : MGTwitterEngine {
 	NSString	*_consumerSecret;
@@ -25,9 +26,11 @@
 @private
 	OAToken		*_accessToken; 
 	OAConsumer	*_consumer;
+	OAAsynchronousDataFetcher *_fetcher;
 }
 
 @property (nonatomic, retain) OAToken *accessToken;
+@property (nonatomic, retain) OAAsynchronousDataFetcher *fetcher;
 @property (nonatomic, readwrite, retain) NSString *consumerSecret, *consumerKey;
 @property (nonatomic, readwrite, retain) NSURL *accessTokenURL;
 @property (nonatomic, readonly) BOOL OAuthSetup;
