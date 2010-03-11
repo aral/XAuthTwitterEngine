@@ -13,12 +13,13 @@
 
 #import "MGTwitterEngine.h"
 #import "XAuthTwitterEngineDelegate.h"
+#import "ExchangeCredentialsOperationDelegate.h"
 
 @class OAToken;
 @class OAConsumer;
 @class OAAsynchronousDataFetcher;
 
-@interface XAuthTwitterEngine : MGTwitterEngine {
+@interface XAuthTwitterEngine : MGTwitterEngine <ExchangeCredentialsOperationDelegate> {
 	NSString	*_consumerSecret;
 	NSString	*_consumerKey;
 	NSURL		*_accessTokenURL;
@@ -27,6 +28,7 @@
 	OAToken		*_accessToken; 
 	OAConsumer	*_consumer;
 	OAAsynchronousDataFetcher *_fetcher;
+	NSOperationQueue *_operationQueue;
 }
 
 @property (nonatomic, retain) OAToken *accessToken;
@@ -34,6 +36,7 @@
 @property (nonatomic, readwrite, retain) NSString *consumerSecret, *consumerKey;
 @property (nonatomic, readwrite, retain) NSURL *accessTokenURL;
 @property (nonatomic, readonly) BOOL OAuthSetup;
+@property (nonatomic, retain) NSOperationQueue *operationQueue;
 
 + (XAuthTwitterEngine *) XAuthTwitterEngineWithDelegate: (NSObject *) delegate;
 - (XAuthTwitterEngine *) initXAuthWithDelegate: (NSObject *) delegate;

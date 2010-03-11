@@ -20,6 +20,7 @@
 #import "OAToken.h"
 
 #import "XAuthTwitterEngine.h"
+#import "ExchangeCredentialsOperation.h"
 
 @interface XAuthTwitterEngine (private)
 
@@ -45,9 +46,11 @@
 @synthesize consumerSecret = _consumerSecret, consumerKey = _consumerKey;
 @synthesize accessToken = _accessToken;
 @synthesize fetcher = _fetcher;
+@synthesize operationQueue = _operationQueue;
 
 - (void) dealloc {
 	self.accessTokenURL = nil;
+	[self.operationQueue release];
 	
 	[_accessToken release];
 	[_consumer release];
@@ -64,6 +67,7 @@
 - (XAuthTwitterEngine *) initXAuthWithDelegate: (NSObject *) delegate {
     if (self = (id) [super initWithDelegate: delegate]) {
 		self.accessTokenURL = [NSURL URLWithString: @"http://twitter.com/oauth/access_token"];
+		self.operationQueue = [[NSOperationQueue alloc] init];
 	}
     return self;
 }
@@ -136,31 +140,20 @@
 //
 -(void)exchangeAccessTokenForUsername:(NSString *)username password:(NSString *)password
 {
+	// 
+	// Doing this as an operation that uses the synchronous OADataFetcher instead of using
+	// the asynchronous OAAsynchronousDataFetcher since the latter doesn't fire the
+	// fail handler when the credential exchange fails with Twitter for some reason.
+	// Other (non-twitter errors) fire, so I guess something is messed up when the class
+	// is used with Twitter's xAuth implementation. Oh well... 
 	//
-	// Modified from http://github.com/norio-nomura/ntlniph/commit/5ce25d68916cd45254c7ff2ba9b91de4f324899a
-	// Courtesy of Norio Nomura (@norio_nomura) via Steve Reynolds (@SteveReynolds)
-	//
-	// Carry out the xAuth, using the OAuthConsumer library directly.
-	//
-	NSURL *url = [NSURL URLWithString:@"https://api.twitter.com/oauth/access_token"];
-	
-	OAMutableURLRequest *request = [[OAMutableURLRequest alloc] initWithURL:url
-																   consumer: self.consumer
-																	  token:nil   // we don't have a Token yet
-																	  realm:nil   // our service provider doesn't specify a realm
-														  signatureProvider:nil] ; // use the default method, HMAC-SHA1
-	
-	[request setHTTPMethod:@"POST"];
-	[request setParameters:[NSArray arrayWithObjects:
-							[OARequestParameter requestParameterWithName:@"x_auth_mode" value:@"client_auth"],
-							[OARequestParameter requestParameterWithName:@"x_auth_username" value:username],
-							[OARequestParameter requestParameterWithName:@"x_auth_password" value:password],
-							nil]];
-	
-	
-	self.fetcher = [[OAAsynchronousDataFetcher alloc] initWithRequest:request delegate:self didFinishSelector:@selector(setAccessToken:withData:) didFailSelector:@selector(accessTokenTicket:didFailWithError:)];
-	[self.fetcher start];
-	[request release];	
+	ExchangeCredentialsOperation *exchangeCredentialsOperation = [[ExchangeCredentialsOperation alloc] init];
+	exchangeCredentialsOperation.username = username;
+	exchangeCredentialsOperation.password = password;
+	exchangeCredentialsOperation.delegate = self;
+	exchangeCredentialsOperation.consumer = self.consumer;
+	[self.operationQueue addOperation:exchangeCredentialsOperation];
+	[exchangeCredentialsOperation release];
 }
 
 //
@@ -197,11 +190,12 @@
 //
 // Access token fetch failed.
 //
+
 - (void) accessTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *) error {
+	NSLog(@"************ access token did fail ***************");
+	
 	if ([_delegate respondsToSelector: @selector(twitterXAuthConnectionDidFailWithError:)]) [(id) _delegate twitterXAuthConnectionDidFailWithError: error];	
 	
-	[self.fetcher release];
-	self.fetcher = nil;
 }
 
 
@@ -210,7 +204,7 @@
 // when twitter sends us an access token this callback will fire
 // we store it in our ivar as well as writing it to the keychain
 //
-
+/*
 - (void) setAccessToken: (OAServiceTicket *) ticket withData: (NSData *) data {
 	if (!ticket.didSucceed || !data) return;
 	
@@ -219,10 +213,8 @@
 
 	[self setAccessTokenFromTokenString:dataString];
 	
-	[self.fetcher release];
-	self.fetcher = nil;
 }
-
+*/
 
 - (NSString *) extractUsernameFromHTTPBody: (NSString *) body {
 	if (!body) return nil;
