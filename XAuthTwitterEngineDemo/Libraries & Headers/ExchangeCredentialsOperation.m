@@ -46,16 +46,12 @@
 	
 	
 	OADataFetcher *dataFetcher = [[OADataFetcher alloc] init];
-	DLog(@"HERE HERE HERE");
 	[dataFetcher fetchDataWithRequest:request delegate:self didFinishSelector:@selector(setAccessToken:withData:) didFailSelector:@selector(accessTokenTicket:didFailWithError:)];
 	[dataFetcher release];
-	DLog(@"HERE HERE HERE");
 	
 	[request release];	
-	DLog(@"HERE HERE HERE");
 
 	[pool drain];
-	DLog(@"HERE HERE HERE");
 }
 
 //
