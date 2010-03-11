@@ -27,12 +27,10 @@
 @private
 	OAToken		*_accessToken; 
 	OAConsumer	*_consumer;
-	OAAsynchronousDataFetcher *_fetcher;
 	NSOperationQueue *_operationQueue;
 }
 
 @property (nonatomic, retain) OAToken *accessToken;
-@property (nonatomic, retain) OAAsynchronousDataFetcher *fetcher;
 @property (nonatomic, readwrite, retain) NSString *consumerSecret, *consumerKey;
 @property (nonatomic, readwrite, retain) NSURL *accessTokenURL;
 @property (nonatomic, readonly) BOOL OAuthSetup;

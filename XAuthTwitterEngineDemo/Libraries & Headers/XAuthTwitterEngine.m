@@ -45,16 +45,16 @@
 @synthesize accessTokenURL = _accessTokenURL;
 @synthesize consumerSecret = _consumerSecret, consumerKey = _consumerKey;
 @synthesize accessToken = _accessToken;
-@synthesize fetcher = _fetcher;
 @synthesize operationQueue = _operationQueue;
 
 - (void) dealloc {
 	self.accessTokenURL = nil;
-	[self.operationQueue release];
+	
+	[self.operationQueue cancelAllOperations];
+	[self.operationQueue release];	
 	
 	[_accessToken release];
 	[_consumer release];
-	[self.fetcher release];
 	[super dealloc];
 }
 
@@ -161,9 +161,7 @@
 //
 -(void)cancelAccessTokenExchange
 {
-	[self.fetcher cancel];
-	[self.fetcher release];
-	self.fetcher = nil;
+	[self.operationQueue cancelAllOperations];
 }
 
 //
@@ -192,10 +190,7 @@
 //
 
 - (void) accessTokenTicket:(OAServiceTicket *)ticket didFailWithError:(NSError *) error {
-	NSLog(@"************ access token did fail ***************");
-	
 	if ([_delegate respondsToSelector: @selector(twitterXAuthConnectionDidFailWithError:)]) [(id) _delegate twitterXAuthConnectionDidFailWithError: error];	
-	
 }
 
 
