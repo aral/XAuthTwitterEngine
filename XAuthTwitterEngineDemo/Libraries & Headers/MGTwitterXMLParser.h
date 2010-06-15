@@ -12,7 +12,11 @@
 
 #import "MGTwitterParserDelegate.h"
 
-@interface MGTwitterXMLParser : NSObject {
+@interface MGTwitterXMLParser : NSObject 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED > 30200 
+	<NSXMLParserDelegate> 
+#endif
+{ 
     __weak NSObject <MGTwitterParserDelegate> *delegate; // weak ref
     NSString *identifier;
     MGTwitterRequestType requestType;
